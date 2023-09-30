@@ -31,3 +31,4 @@
 // }
 
 const min = parseInt(prompt("введіть число"));
+else

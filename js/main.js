@@ -29,3 +29,5 @@
 //         console.log("4 чверть");
 //         break;
 // }
+
+const min = parseInt(prompt("введіть число"));

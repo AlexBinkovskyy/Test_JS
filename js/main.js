@@ -34,23 +34,62 @@
 // значення '1', то у змінну result запишемо 'зима', якщо має значення
 // '2' - 'весна' і так далі. Розв'яжіть завдання через switch-case.
 
-const num = parseInt(prompt("введіть число"));
-let result;
-switch (num) {
-  case 1:
-    result = "Зима";
-    break;
-  case 2:
-    result = "Весна";
-    break;
-  case 3:
-    result = "Літо";
-    break;
-  case 4:
-    result = "Осінь";
-    break;
-  default:
-    result = "Немає такої пори року";
-    break;
-}
-console.log(result);
+// const num = parseInt(prompt("введіть число"));
+// let result;
+// switch (num) {
+//   case 1:
+//     result = "Зима";
+//     break;
+//   case 2:
+//     result = "Весна";
+//     break;
+//   case 3:
+//     result = "Літо";
+//     break;
+//   case 4:
+//     result = "Осінь";
+//     break;
+//   default:
+//     result = "Немає такої пори року";
+//     break;
+// }
+// console.log(result);
+
+
+//Напишіть цикл, який виводить у консоль
+// числа від max до min за спаданням
+// Додайте усі парні числа від min до max
+
+// 01
+// const min = 0;
+// const max = 100;
+// for (let i = max; i >= min; i--) {
+//     console.log(i);
+// }
+
+// 02
+// const min = 0;
+// const max = 50;
+// // let evenNum = 0;
+// for (let i = min; i <= max; i++){
+//     if (i % 2 === 0) {
+//         // evenNum += i;
+//         console.log(i);
+//     }
+//     // console.log(evenNum);
+// }
+
+// 03
+// const min = 0;
+// const max = 50;
+// function eveNum(min, max) {
+//     let total = 0;
+//     for (let i = min; i <= max; i++) {
+//         if (i % 2 === 0) {
+//             console.log(i);
+//             total += i;
+//         }
+//     }
+//     return total
+// }
+// console.log(eveNum(10, 60));

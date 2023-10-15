@@ -263,23 +263,44 @@
 // TASK 1
 // Потрібно написати функцію, яка приймає 2 параметри obj і key, яка буде перебирати об'єкт.
 // Якщо об'єкт має такий ключ - поверне true
-const obj = {
-    name: 'Igor',
-    car:  'Mercedes',
-    carColor: 'black'
-}
+// const obj = {
+//     name: 'Igor',
+//     car:  'Mercedes',
+//     carColor: 'black'
+// }
+
+// // function isProperty(obj, key) {
+// //   const arr = Object.keys(obj);
+// //   return arr.some(item =>  item === key)
+  
+// //   console.log(arr);
+// // };
+// // console.log(isProperty(obj, "car1"))
+
 
 // function isProperty(obj, key) {
-//   const arr = Object.keys(obj);
-//   return arr.some(item =>  item === key)
-  
-//   console.log(arr);
+//   return Object.keys(obj).includes(key)
 // };
-// console.log(isProperty(obj, "car1"))
+// console.log(isProperty(obj, "car"))
+
+//Напишіть ф-цію calcTotalPrice(stones, stonesName),
+  //яка приймає масив об'єктів і
+  //Рядок з назвою каменю.
+  //Функція вважає, що м повертає загальну вартість каменів
+  //з ​​таким ім'ям, ціною та кількістю з об'єкта
 
 
-function isProperty(obj, key) {
-  return Object.keys(obj).includes(key)
-};
-console.log(isProperty(obj, "car"))
+  const stones = [
+    { name: "Смарагд", price: 1300, quantity: 4 },
+    { name: "Діамант", price: 2700, quantity: 6 },
+    { name: "Сапфір", price: 400, quantity: 7 },
+    { name: "Щебінь", price: 150, quantity: 100 },
+  ];
 
+
+function calcTotalPrice(stones, stonesName){
+  const{price, quantity} = stones.find((stone) => stone.name === stonesName)
+  return price * quantity
+}
+
+console.log(calcTotalPrice(stones, "Діамант"));

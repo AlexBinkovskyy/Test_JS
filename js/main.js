@@ -290,17 +290,28 @@
   //з ​​таким ім'ям, ціною та кількістю з об'єкта
 
 
-  const stones = [
-    { name: "Смарагд", price: 1300, quantity: 4 },
-    { name: "Діамант", price: 2700, quantity: 6 },
-    { name: "Сапфір", price: 400, quantity: 7 },
-    { name: "Щебінь", price: 150, quantity: 100 },
-  ];
+//   const stones = [
+//     { name: "Смарагд", price: 1300, quantity: 4 },
+//     { name: "Діамант", price: 2700, quantity: 6 },
+//     { name: "Сапфір", price: 400, quantity: 7 },
+//     { name: "Щебінь", price: 150, quantity: 100 },
+//   ];
 
 
-function calcTotalPrice(stones, stonesName){
-  const{price, quantity} = stones.find((stone) => stone.name === stonesName)
-  return price * quantity
-}
+// function calcTotalPrice(stones, stonesName){
+//   const{price, quantity} = stones.find((stone) => stone.name === stonesName)
+//   return price * quantity
+// }
 
-console.log(calcTotalPrice(stones, "Діамант"));
+// console.log(calcTotalPrice(stones, "Діамант"));
+
+вказується кількість тегів
+const tweets = [
+  { id: "000", likes: 5, tags: ["js", "nodejs"] },
+  { id: "001", likes: 2, tags: ["html", "css"] },
+  { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+  { id: "003", likes: 8, tags: ["css", "react"] },
+  { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+];
+
+// {js: 3, nodejs: 3, html: 2, css: 2, react: 2}

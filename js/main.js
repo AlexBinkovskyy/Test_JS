@@ -223,7 +223,7 @@
 
 
 // function findMatches(array, ...args) {
-//     const matches = []; 
+//     const matches = [];
 //         for(const item of args){
 //             if(array.includes(item)) {
 //                 matches.push(item)
@@ -234,27 +234,52 @@
     
 //     return matches;
 // }
-// console.log(findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7));  
-// console.log(findMatches([4, 89, 17, 36, 2], 8, 17, 89, 27, 2));  
-// console.log(findMatches([10, 24, 41, 6, 9, 19], 24, 11, 9, 23, 41));  
-// console.log(findMatches([63, 11, 8, 29], 4, 7, 16));  
+// console.log(findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7));
+// console.log(findMatches([4, 89, 17, 36, 2], 8, 17, 89, 27, 2));
+// console.log(findMatches([10, 24, 41, 6, 9, 19], 24, 11, 9, 23, 41));
+// console.log(findMatches([63, 11, 8, 29], 4, 7, 16));
 
 
 
-const bookShelf = {
+// const bookShelf = {
    
-    books: ["The last kingdom", "The guardian of dreams"],
+//     books: ["The last kingdom", "The guardian of dreams"],
     
-    getBooks() {
-      return "Returning all books";
-    },
-    addBook(bookName) {
-      return `Adding book ${bookName}`;
-    },
+//     getBooks() {
+//       return "Returning all books";
+//     },
+//     addBook(bookName) {
+//       return `Adding book ${bookName}`;
+//     },
     
-  };
+//   };
 
-  console.log(bookShelf.getBooks());
-  console.log(bookShelf.addBook("Haze"));
-  console.log(bookShelf.removeBook("Red sunset"));
-  console.log(bookShelf.updateBook("Sands of dune", "Dune"));
+//   console.log(bookShelf.getBooks());
+//   console.log(bookShelf.addBook("Haze"));
+//   console.log(bookShelf.removeBook("Red sunset"));
+//   console.log(bookShelf.updateBook("Sands of dune", "Dune"));
+
+
+// TASK 1
+// Потрібно написати функцію, яка приймає 2 параметри obj і key, яка буде перебирати об'єкт.
+// Якщо об'єкт має такий ключ - поверне true
+const obj = {
+    name: 'Igor',
+    car:  'Mercedes',
+    carColor: 'black'
+}
+
+// function isProperty(obj, key) {
+//   const arr = Object.keys(obj);
+//   return arr.some(item =>  item === key)
+  
+//   console.log(arr);
+// };
+// console.log(isProperty(obj, "car1"))
+
+
+function isProperty(obj, key) {
+  return Object.keys(obj).includes(key)
+};
+console.log(isProperty(obj, "car"))
+

@@ -290,17 +290,31 @@
   //з ​​таким ім'ям, ціною та кількістю з об'єкта
 
 
-  const stones = [
-    { name: "Смарагд", price: 1300, quantity: 4 },
-    { name: "Діамант", price: 2700, quantity: 6 },
-    { name: "Сапфір", price: 400, quantity: 7 },
-    { name: "Щебінь", price: 150, quantity: 100 },
-  ];
+ // const stones = [
+   // { name: "Смарагд", price: 1300, quantity: 4 },
+ //   { name: "Діамант", price: 2700, quantity: 6 },
+ //   { name: "Сапфір", price: 400, quantity: 7 },
+ //   { name: "Щебінь", price: 150, quantity: 100 },
+ // ];
 
 
-function calcTotalPrice(stones, stonesName){
-  const{price, quantity} = stones.find((stone) => stone.name === stonesName)
-  return price * quantity
-}
+//function calcTotalPrice(stones, stonesName){
+// const{price, quantity} = stones.find((stone) => stone.name === stonesName)
+//  return price * quantity
+//}
 
-console.log(calcTotalPrice(stones, "Діамант"));
+//console.log(calcTotalPrice(stones, "Діамант"));
+
+
+// Task 3
+//Призначити знижку 20% на фрукти в масиві,
+//Присвоїти ID для кожного продукту
+
+const fruits = [
+  { name: "apple", price: 200 },
+  { name: "orange", price: 300 },
+  { name: "grapes", price: 750 },
+];
+
+const arr = fruits.map(fruit => ({ ...fruit, price: fruit.price * 0.8, id: Math.floor(Math.random() * 100) }))
+ console.log(arr);

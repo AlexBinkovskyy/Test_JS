@@ -303,7 +303,6 @@
 //   return price * quantity
 // }
 
-<<<<<<< HEAD
 // console.log(calcTotalPrice(stones, "Діамант"));
 
 // Завдання 29.10.23
@@ -346,6 +345,3 @@
 
 // const check = savePassword("qwerty");
 // console.log(check("qwerty"))
-=======
-console.log(calcTotalPrice(stones, "Діамант"));
->>>>>>> eb4c83392dc350c2a7bc79e42eec317c1a623c62

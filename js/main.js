@@ -331,3 +331,17 @@
 //   }
   
 // callAction(item.getQuantity);
+
+// ! 8. Напишіть функцію savePassword(password), яка приймає
+//  пароль і повертає внутрішню функцію, що приймає 
+// рядок і повертає буль true, якщо рядок збігається зі збереженим
+// паролем і false - якщо не збігається
+
+// function savePassword(password) {
+ 
+    
+//     return (check) => check === password ? true : false;
+// }
+
+// const check = savePassword("qwerty");
+// console.log(check("qwerty"))

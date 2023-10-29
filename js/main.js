@@ -221,7 +221,6 @@
 // console.log(addOverNum(15, 32, 6, 13, 19, 8));
 // console.log(addOverNum(20, 74, 11, 62, 46, 12, 36));
 
-
 // function findMatches(array, ...args) {
 //     const matches = [];
 //         for(const item of args){
@@ -230,8 +229,6 @@
 //             }
 //         }
 
-
-    
 //     return matches;
 // }
 // console.log(findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7));
@@ -239,26 +236,23 @@
 // console.log(findMatches([10, 24, 41, 6, 9, 19], 24, 11, 9, 23, 41));
 // console.log(findMatches([63, 11, 8, 29], 4, 7, 16));
 
-
-
 // const bookShelf = {
-   
+
 //     books: ["The last kingdom", "The guardian of dreams"],
-    
+
 //     getBooks() {
 //       return "Returning all books";
 //     },
 //     addBook(bookName) {
 //       return `Adding book ${bookName}`;
 //     },
-    
+
 //   };
 
 //   console.log(bookShelf.getBooks());
 //   console.log(bookShelf.addBook("Haze"));
 //   console.log(bookShelf.removeBook("Red sunset"));
 //   console.log(bookShelf.updateBook("Sands of dune", "Dune"));
-
 
 // TASK 1
 // Потрібно написати функцію, яка приймає 2 параметри obj і key, яка буде перебирати об'єкт.
@@ -272,11 +266,10 @@
 // // function isProperty(obj, key) {
 // //   const arr = Object.keys(obj);
 // //   return arr.some(item =>  item === key)
-  
+
 // //   console.log(arr);
 // // };
 // // console.log(isProperty(obj, "car1"))
-
 
 // function isProperty(obj, key) {
 //   return Object.keys(obj).includes(key)
@@ -284,11 +277,10 @@
 // console.log(isProperty(obj, "car"))
 
 //Напишіть ф-цію calcTotalPrice(stones, stonesName),
-  //яка приймає масив об'єктів і
-  //Рядок з назвою каменю.
-  //Функція вважає, що м повертає загальну вартість каменів
-  //з ​​таким ім'ям, ціною та кількістю з об'єкта
-
+//яка приймає масив об'єктів і
+//Рядок з назвою каменю.
+//Функція вважає, що м повертає загальну вартість каменів
+//з ​​таким ім'ям, ціною та кількістю з об'єкта
 
 //   const stones = [
 //     { name: "Смарагд", price: 1300, quantity: 4 },
@@ -296,7 +288,6 @@
 //     { name: "Сапфір", price: 400, quantity: 7 },
 //     { name: "Щебінь", price: 150, quantity: 100 },
 //   ];
-
 
 // function calcTotalPrice(stones, stonesName){
 //   const{price, quantity} = stones.find((stone) => stone.name === stonesName)
@@ -306,7 +297,6 @@
 // console.log(calcTotalPrice(stones, "Діамант"));
 
 // Завдання 29.10.23
-
 
 //! 4. Виправте помилки, щоб код працював
 // const product = {
@@ -329,29 +319,25 @@
 // function callAction(action) {
 //       action.apply(item)
 //   }
-  
+
 // callAction(item.getQuantity);
 
 // ! 8. Напишіть функцію savePassword(password), яка приймає
-//  пароль і повертає внутрішню функцію, що приймає 
+//  пароль і повертає внутрішню функцію, що приймає
 // рядок і повертає буль true, якщо рядок збігається зі збереженим
 // паролем і false - якщо не збігається
 
 // function savePassword(password) {
- 
-    
+
 //     return (check) => check === password ? true : false;
 // }
 
 // const check = savePassword("qwerty");
 // console.log(check("qwerty"))
 
-
-
 //! 9. Напишіть функцію зберігання знижки.Функція повертає
 //Іншу функцію, яка приймає суму покупки
 //і повертає фінальну суму із збереженою знижкою.
-
 
 // function discountFu(discount) {
 //   return (sum) => sum - sum * discount / 100
@@ -359,3 +345,35 @@
 
 // const calculateSum = discountFu(10)(900)
 // console.log(calculateSum);
+
+// /!  Напиши клас Client який створює об'єкт
+//з ​​властивостями login email
+//Оголоси приватні властивості #login #email,
+//доступ до яких зроби через геттер та сеттер login email
+
+class Client {
+  #login;
+  #email;
+  constructor(userLogin, userMail) {
+    this.#login = userLogin;
+    this.#email = userMail;
+  }
+
+  get login() {
+    return this.#login;
+  }
+  set login(userLogin) {
+    this.#login = userLogin;
+  }
+
+  get email() {
+    return this.#email;
+  }
+  set email(userMail) {
+    this.#email = userMail;
+  }
+}
+
+const newClient = new Client('&&&' ,'^^^^^')
+console.log(newClient.login = "www.google.com");
+console.log(newClient.login);

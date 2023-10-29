@@ -303,4 +303,4 @@
 //   return price * quantity
 // }
 
-// console.log(calcTotalPrice(stones, "Діамант"));
+console.log(calcTotalPrice(stones, "Діамант"));

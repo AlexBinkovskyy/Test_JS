@@ -377,3 +377,41 @@
 // const newClient = new Client('&&&' ,'^^^^^')
 // console.log(newClient.login = "www.google.com");
 // console.log(newClient.login);
+
+//! 14. Створити клас Worker, у якого є властивості name, age, salary.
+//У класу Worker є метод getSalary.
+//Створити клас TopLevelWorker, у якого є властивість hierarchyLevel
+//і який успадковує клас Worker, додаючи метод getHierarchyLevel
+
+// const workerObj = {
+//   name: "Mango",
+//   surname: "Worker",
+//   age: 30,
+//   position: "FE developer",
+//   salary: 5000,
+// };
+
+// class Worker {
+//   constructor({name, age, salary}) {
+//     this.name = name;
+//     this.age = age;
+//     this.salary = salary;
+//   }
+//   getSalary() {
+//     return this.salary;
+//   }
+// }
+
+// class TopLevelWorker extends Worker {
+//     constructor (obj, hierarchyLevel) {
+//         super(obj)
+//         this.hierarchyLevel = hierarchyLevel; 
+//     }
+//     getHierarchyLevel() {
+//         return this.hierarchyLevel;
+//       }
+// }
+
+// const newWorker = new TopLevelWorker (workerObj, 'TopRanked')
+// console.log(newWorker.getHierarchyLevel());
+// console.log(newWorker.getSalary());

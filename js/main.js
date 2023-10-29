@@ -345,3 +345,17 @@
 
 // const check = savePassword("qwerty");
 // console.log(check("qwerty"))
+
+
+
+//! 9. Напишіть функцію зберігання знижки.Функція повертає
+//Іншу функцію, яка приймає суму покупки
+//і повертає фінальну суму із збереженою знижкою.
+
+
+// function discountFu(discount) {
+//   return (sum) => sum - sum * discount / 100
+// }
+
+// const calculateSum = discountFu(10)(900)
+// console.log(calculateSum);

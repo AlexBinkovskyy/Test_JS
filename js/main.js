@@ -351,29 +351,29 @@
 //Оголоси приватні властивості #login #email,
 //доступ до яких зроби через геттер та сеттер login email
 
-class Client {
-  #login;
-  #email;
-  constructor(userLogin, userMail) {
-    this.#login = userLogin;
-    this.#email = userMail;
-  }
+// class Client {
+//   #login;
+//   #email;
+//   constructor(userLogin, userMail) {
+//     this.#login = userLogin;
+//     this.#email = userMail;
+//   }
 
-  get login() {
-    return this.#login;
-  }
-  set login(userLogin) {
-    this.#login = userLogin;
-  }
+//   get login() {
+//     return this.#login;
+//   }
+//   set login(userLogin) {
+//     this.#login = userLogin;
+//   }
 
-  get email() {
-    return this.#email;
-  }
-  set email(userMail) {
-    this.#email = userMail;
-  }
-}
+//   get email() {
+//     return this.#email;
+//   }
+//   set email(userMail) {
+//     this.#email = userMail;
+//   }
+// }
 
-const newClient = new Client('&&&' ,'^^^^^')
-console.log(newClient.login = "www.google.com");
-console.log(newClient.login);
+// const newClient = new Client('&&&' ,'^^^^^')
+// console.log(newClient.login = "www.google.com");
+// console.log(newClient.login);

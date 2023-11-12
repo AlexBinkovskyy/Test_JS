@@ -427,7 +427,6 @@
 //   console.log("Введене значення: ", inputValue.value);
 // }
 
-
 // Завдання 2
 // Після натискання кнопки "SWAP ME" здійснюється обмін вмістом між двома інпутами.
 // Ви можете натиснути на неї кілька разів або вручну змінити вміст інпутів.
@@ -444,5 +443,23 @@
 //   rightSwapInput.value = firstValue;
 // }, {once: true})
 
+// *
+// Завдання 3
+// Кнопка "Приховати" ховає текст і замінює назву кнопки на
+// "Розкрити", при повторному натисканні текст знову стає доступним
+// і кнопка набуває початкового вигляду.
+// */
 
- 
+// const input = document.querySelector("#passwordInput");
+// const btn = document.querySelector("#passwordButton");
+// btn.addEventListener("click", onClick);
+
+// function onClick() {
+//   if (input.type === "text") {
+//     btn.textContent = "Розкрити";
+//     input.setAttribute("type", "password");
+//   } else {
+//     btn.textContent = "Приховати";
+//     input.setAttribute("type", "text");
+//   }
+// }

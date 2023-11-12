@@ -420,9 +420,29 @@
 ~Завдання 1 task 6
 Натискання на кнопку "SHOW ME" має виводити значення з поля введення (дивіться на елементи в html-розмітці)
 */
-const btn = document.getElementById("alertButton");
-btn.addEventListener("click", showInputValue);
-const inputValue = document.getElementById("alertInput");
-function showInputValue() {
-  console.log("Введене значення: ", inputValue.value);
-}
+// const btn = document.getElementById("alertButton");
+// btn.addEventListener("click", showInputValue);
+// const inputValue = document.getElementById("alertInput");
+// function showInputValue() {
+//   console.log("Введене значення: ", inputValue.value);
+// }
+
+
+// Завдання 2
+// Після натискання кнопки "SWAP ME" здійснюється обмін вмістом між двома інпутами.
+// Ви можете натиснути на неї кілька разів або вручну змінити вміст інпутів.
+
+// const swapButton = document.querySelector('#swapButton');
+// const leftSwapInput = document.querySelector('#leftSwapInput');
+// const rightSwapInput = document.querySelector('#rightSwapInput');
+
+// swapButton.addEventListener('click', () => {
+//   const firstValue = leftSwapInput.value;
+//   const secondValue = rightSwapInput.value;
+
+//   leftSwapInput.value = secondValue;
+//   rightSwapInput.value = firstValue;
+// }, {once: true})
+
+
+ 

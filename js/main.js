@@ -119,3 +119,46 @@
 // } else {
 //   alert("Я вас не знаю");
 // }
+// const abraKadabra = "абракaдабраь";
+// if (abraKadabra[abraKadabra.length - 1] === "ь") {
+//   console.log(abraKadabra[abraKadabra.length - 2]);
+// } else {
+//   console.log(abraKadabra[abraKadabra.length - 1]);
+// }
+
+// const firstWord = "кінськьm";
+// if (firstWord[firstWord.length - 1] === "ь") {
+//   console.log(firstWord[firstWord.length - 2]);
+// }
+// console.log(firstWord[firstWord.length - 1]);
+
+// stringToNumber("1234") == 1234;
+// stringToNumber("605") == 605;
+// stringToNumber("1405") == 1405;
+// stringToNumber("-7") == -7;
+// const stringToNumber = "22";
+// function learnJavaScript() {
+//   const stringToNumber = (str) => {
+//     return str;
+//   };
+//   return stringToNumber("999");
+// }
+// console.log(stringToNumber);
+// let number = 0;
+// for (let i = 1; i <= 50; i++) {
+//   if (i % 3 === 0) {
+//     console.log(i);
+//     number += i;
+//   }
+// }
+// console.log("Сума", number);
+// const arr = ["Привіт,", "світ", " !"];
+// console.log(arr[0] + arr[1] + arr[2]);
+// let fruits = ["Яблоко", "Апельсин", "Слива"];
+// fruits.push("Груша");
+// console.log(fruits);
+// function alphabet_order(str) {
+//   return str.split("").sort().join("");
+// }
+
+// document.writeln(alphabet_order("alphabetical")); // "aaabcehillpt"

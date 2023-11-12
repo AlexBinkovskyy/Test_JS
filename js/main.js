@@ -463,3 +463,32 @@
 //     input.setAttribute("type", "text");
 //   }
 // }
+
+/*
+Завдання 7
+При натисканні на коло він повинен слідувати за курсором.
+При повторному натисканні він стає в початкове положення.
+https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/MouseEvent
+https://developer.mozilla.org/ru/docs/Web/API/MouseEvent/pageX
+https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/pageY
+*/
+
+// const outerCircle = document.querySelector(".outerCircle");
+// outerCircle.addEventListener("click", followCircle);
+// function followCircle(event) {
+//   // getComputedStyle(event.currentTarget);
+//   // console.log(getComputedStyle(event.currentTarget).top);
+//   if (event.currentTarget.style.position === "absolute") {
+//     event.currentTarget.style.position = "static";
+//     outerCircle.style.top = "auto";
+//     outerCircle.style.left = "auto";
+//     window.removeEventListener("mousemove", onMouseEvent);
+//     return;
+//   }
+//   window.addEventListener("mousemove", onMouseEvent);
+//   event.currentTarget.style.position = "absolute";
+// }
+// function onMouseEvent(event) {
+//   outerCircle.style.top = event.pageY - 20 + "px";
+//   outerCircle.style.left = event.pageX - 20 + "px";
+// }

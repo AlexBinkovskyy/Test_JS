@@ -405,7 +405,7 @@
 // class TopLevelWorker extends Worker {
 //     constructor (obj, hierarchyLevel) {
 //         super(obj)
-//         this.hierarchyLevel = hierarchyLevel; 
+//         this.hierarchyLevel = hierarchyLevel;
 //     }
 //     getHierarchyLevel() {
 //         return this.hierarchyLevel;
@@ -415,3 +415,14 @@
 // const newWorker = new TopLevelWorker (workerObj, 'TopRanked')
 // console.log(newWorker.getHierarchyLevel());
 // console.log(newWorker.getSalary());
+
+/*
+~Завдання 1 task 6
+Натискання на кнопку "SHOW ME" має виводити значення з поля введення (дивіться на елементи в html-розмітці)
+*/
+const btn = document.getElementById("alertButton");
+btn.addEventListener("click", showInputValue);
+const inputValue = document.getElementById("alertInput");
+function showInputValue() {
+  console.log("Введене значення: ", inputValue.value);
+}

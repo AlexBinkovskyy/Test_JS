@@ -556,12 +556,32 @@ https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/pageY
  * Список із завданнями має бути доступним після перезавантаження сторінки.
  */
 
-const TaskInfo = JSON.parse(localStorage.getItem("TaskInfo")) || [];
+let TaskInfo = JSON.parse(localStorage.getItem("TaskInfo")) || [];
 const cardList = document.querySelector("#task-list");
 const inputForm = document.querySelector("#task-form");
 inputForm.addEventListener("submit", onSubmit);
+cardList.addEventListener("click", onClick);
+addLayout(TaskInfo);
 
-addLayout(TaskInfo)
+function onClick(evt) {
+  evt.preventDefault();
+
+  if (evt.target.nodeName !== "BUTTON") {
+    return;
+  }
+  const currentId = evt.target.closest("[data-id]").dataset.id;
+  removeItem(currentId);
+}
+
+function removeItem(currentId) {
+  const arrItems = JSON.parse(localStorage.getItem("TaskInfo"));
+  const updateArrItems = arrItems.filter(
+    ({ id }) => Number(id) !== Number(currentId)
+  );
+  localStorage.setItem("TaskInfo", JSON.stringify(updateArrItems));
+  addLayout(updateArrItems);
+  TaskInfo = [];
+}
 
 function onSubmit(event) {
   event.preventDefault();
@@ -582,9 +602,8 @@ function onSubmit(event) {
 function addLayout(arr) {
   const arrLayout = arr.map((item) => {
     return createLayout(item);
-});
-cardList.innerHTML = arrLayout.join('');
-
+  });
+  cardList.innerHTML = arrLayout.join("");
 }
 
 function createLayout({ taskName, taskText, id }) {
@@ -593,5 +612,5 @@ function createLayout({ taskName, taskText, id }) {
     <p>${taskText}</p>
     <button class="task-list-item-btn">Clear</button>
 </li>`;
-return layout;
+  return layout;
 }

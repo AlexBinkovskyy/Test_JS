@@ -538,3 +538,60 @@ https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/pageY
 // console.log(greet().then(console.log));
 
 // console.log(greet(5).then((data)=>console.log(data)));
+
+/**
+ * Створи список справ.
+ * На сторінці є два інпути які має вводиться назва і текст задачі.
+ * Після натискання на кнопку "Додати" завдання додається до списку #task-list.
+ *
+ * Розмітка картки задачі
+ * <li class="task-list-item">
+     <h3>Заголовок</h3>
+     <p>Текст</p>
+     <button class="task-list-item-btn"> </button>
+ * </li>
+ *
+ * У кожної картки має бути кнопка "Видалити", щоб можна було
+ * прибрати завдання зі списку.
+ * Список із завданнями має бути доступним після перезавантаження сторінки.
+ */
+
+const TaskInfo = JSON.parse(localStorage.getItem("TaskInfo")) || [];
+const cardList = document.querySelector("#task-list");
+const inputForm = document.querySelector("#task-form");
+inputForm.addEventListener("submit", onSubmit);
+
+addLayout(TaskInfo)
+
+function onSubmit(event) {
+  event.preventDefault();
+  const {
+    elements: { taskName, taskText },
+  } = event.currentTarget;
+  const taskObj = {
+    taskName: taskName.value,
+    taskText: taskText.value,
+    id: Math.random(),
+  };
+  TaskInfo.push(taskObj);
+  localStorage.setItem("TaskInfo", JSON.stringify(TaskInfo));
+  event.target.reset();
+  addLayout(JSON.parse(localStorage.getItem("TaskInfo")));
+}
+
+function addLayout(arr) {
+  const arrLayout = arr.map((item) => {
+    return createLayout(item);
+});
+cardList.innerHTML = arrLayout.join('');
+
+}
+
+function createLayout({ taskName, taskText, id }) {
+  const layout = `<li class="task-list-item" data-id="${id}">
+    <h3>${taskName}</h3>
+    <p>${taskText}</p>
+    <button class="task-list-item-btn">Clear</button>
+</li>`;
+return layout;
+}

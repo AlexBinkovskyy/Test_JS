@@ -31,19 +31,16 @@
       <button id="passwordButton">Приховати</button>
     </div> -->
 
-    <!-- ЗАДАЧА 7 -->
-       
-    <div>
-           
-      <p class="taskTitle">ЗАДАЧА 7</p>
-           
-      <div class="outerCircle">
-               
-        <div class="innerCircle"></div>
-             
+    <header class="header">
+      <div class="container header-container">
+        <form class="header-form" id="task-form">
+          <input class="header-form-input" type="text" name="taskName" />
+          <input class="header-form-input" type="text" name="taskText" />
+          <button class="header-form-btn" type="submit">Додати</button>
+        </form>
       </div>
-         
-    </div>
+    </header>
+    <div class="container"><ul id="task-list"></ul></div>
 
     <script src="./js/main.js"></script>
   </body>

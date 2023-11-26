@@ -492,3 +492,49 @@ https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/pageY
 //   outerCircle.style.top = event.pageY - 20 + "px";
 //   outerCircle.style.left = event.pageX - 20 + "px";
 // }
+
+// setTimeout(function () {
+//   console.log("A");
+//   setTimeout(function () {
+//     console.log("B");
+//     setTimeout(function () {
+//       console.log("C");
+//     }, 1000);
+//   }, 2000);
+// }, 3000);
+
+// let i = 0;
+// setTimeout(() => alert(i), 100);
+// for (let j = 0; j < 1000000000; j++) {
+//   i++;
+// }
+
+// let a = 1;
+// setTimeout(() => {
+//   a = 2;
+// }, 0);
+// console.log(a);
+
+// const first = new Promise((resolve, reject) => {
+//  setTimeout(resolve, 500, "один")
+// })
+// const second = new Promise((resolve, reject) => {
+//  setTimeout(resolve, 100, "два");
+// });
+// Promise.race([first, second]).then((res) => console.log(res));
+
+// Перероби функцію на проміс таким чином, щоб проміс повертав значення
+// через 2 секунди після виклику функції
+// function greet() {
+//   return "hello world";
+// }
+
+// function greet(data) {
+//     return new Promise(resolve => {
+//         setTimeout(() => resolve(data), 2000);
+//     })
+// }
+
+// console.log(greet().then(console.log));
+
+// console.log(greet(5).then((data)=>console.log(data)));
